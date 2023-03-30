@@ -1,0 +1,141 @@
+img {
+  max-width: 40%;
+  height: 300px;
+  width:300px;
+  margin-left: 10px;
+  float: left;
+}
+
+p{
+clear: both;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+img:first-child:hover{
+  transform: rotate(30deg);
+}
+
+img:last-child:hover{
+  transform: rotate(330deg);
+}
+
+img:first-child:hover {
+  transform: scale(1.5);
+}
+
+img:last-child:hover{
+  transform: scale(.5);
+}
+
+img:first-child:hover {
+  transform: translateY(-50px);
+}
+
+img:last-child:hover {
+  transform: translate(-50px, 100px);
+}
+.rounding {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(39, 115, 247);
+  border-radius: 0;
+  transform: 12s;
+}
+
+.rounding:hover {
+  transition-property: border-radius, background-color;
+  transition-duration: 2s , 2s;
+  transition-timing-function: linear, linear;
+  border-radius: 50%;
+  background-color: #71f01db2;
+}
+
+.doNothing {
+  background-color: #801fe2;
+  opacity: 1;
+  font-size: 25px;
+  color: white;
+  outline: 4px solid rgb(242, 26, 242);
+  margin: 100px;
+  transition-property: opacity;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+  /* opacity: 1.0; */
+}
+.doNothing:hover {
+  /* transition-property: opacity;
+  transition-duration: 100ms;
+  transition-timing-function: linear; */
+  opacity: 1.0;
+}
+
+
+
+@keyframes moveRight {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: 90%;
+    top: 25%;
+  }
+  50% {
+    left: 0%;
+    top: 50%;
+  }
+  75% {
+    left: 90%;
+    top: 75%;
+  }
+  100% {
+    left: 0%;
+    top: 90%;
+  }
+}
+
+.animationElement {
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: moveRight;
+  width: 10%;
+  height: 10%;
+  background-color: aqua;
+  position: relative;
+}
+
+
+
+
+img:first-child {
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-name: moveRight;
+  position: absolute;
+}
+
+@keyframes blinkAnimation {
+  0%{
+    color:rgb(9, 255, 0);
+  }
+  50%{
+    color: #fff;
+  }
+  100%{
+    color:rgb(9, 255, 0);
+  }
+}
+
+.blink {
+  animation-duration: 350ms;
+  animation-timing-function: steps(3);
+  animation-iteration-count: infinite;
+  animation-name: blinkAnimation;
+  background-color: #0394e6;
+}
